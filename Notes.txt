@@ -1,0 +1,8 @@
+Product:
+- ID
+- Name
+- Picture
+- Description
+- Price
+- Available
+- Ingredients
