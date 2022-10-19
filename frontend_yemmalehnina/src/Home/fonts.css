@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Hezaedrus-regular';
+    src: local('Hezaedrus-regular'), url(./Hezaedrus-Regular.ttf) format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Hezaedrus-medium';
+    src: local('Hezaedrus-medium'), url(./Hezaedrus-Medium.ttf) format('truetype');
+  }

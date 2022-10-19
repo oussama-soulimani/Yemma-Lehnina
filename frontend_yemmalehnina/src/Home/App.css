@@ -1,0 +1,173 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.App {
+  background: url(arabicPatternv2.png) center center repeat;
+  background-size:30em;
+
+}
+
+.Header{
+  position: fixed;
+  width: 100%;
+  background-color: #FFC992;
+  background-color:rgba(255, 201, 146, 0.8);
+  height:60px;
+  z-index:10;
+}
+
+.Logo{
+  position: relative;
+  height:90%;
+  padding-left:3px;
+  padding-bottom:3px;
+  padding-top:3px;
+
+}
+
+.BottonsBoxLarge{
+  height: 100%;
+  float: right;
+  width: 400px;
+  display: flex;
+  flex-direction: center;
+  justify-content: space-around;
+  align-items: center;
+  padding-right: 15px;
+}
+
+.BottonsBoxSmall{
+  height: 100%;
+  float: right;
+  width: 400px;
+  display: flex;
+  flex-direction: center;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.MenuBox{
+  height: 100%;
+  width: 70px;
+  float: right;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.Menu{
+  float: right;
+  width: 40%;
+  height: 50%;
+  display: flex;
+  align-self: center;
+  
+}
+
+.HeaderButton{
+  font-family: "Hezaedrus-regular";
+  font-size: 22px;
+  color: rgb(111, 78, 55);
+  display: flex;
+
+}
+
+.HeaderButtonHover{
+  font-family: "Hezaedrus-regular";
+  font-size: 25px;
+  color: rgb(164, 132, 109);
+  display: flex;
+}
+
+
+.DropdownButton{
+  size: 3px;
+  justify-content: end;
+  margin-left: 4px;
+}
+
+
+.TussenBar{
+  width: 100%;
+  background-color: rgba(255, 230, 210, 0.43);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 80px;
+  font-family: "Hezaedrus-regular";
+  font-size: 40px;
+  color: rgb(111, 78, 55);
+}
+
+.VideoBox{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  
+}
+
+.bgVideo{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.Info{
+  width: 30%;
+  height: 30%;
+  position: absolute;
+  z-index: 10;
+  top: 30%;
+  left: 15%;
+}
+
+.InfoSmall{
+  width: 85%;
+  height: auto;
+  position: absolute;
+  z-index: 10;
+  top: 30%;
+  left: 7.5%;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Subheader{
+  color: #FFD7BB;
+  font-family: "Hezaedrus-medium";
+  text-align: center;
+}
+
+.smallSubHeader{
+  font-size: 42px;
+}
+
+.bigSubHeader{
+  font-size: 64px;
+}
+
+.subBoxText{
+  margin-top: 5%;
+  color: #FFD7BB;
+  font-size: 24px;
+  text-align: center;
+}
+
+.AboutUs{
+  width: 200px;
+  height: 70px;
+  margin-top: 10%;
+  background-color:rgba(212, 135, 70, 0.71) ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFD7BB;
+  font-size: 24px;
+  border-radius: 3px;
+}
