@@ -8,6 +8,10 @@ import {useState, useEffect, useCallback} from "react"
 import dropdownIcon from "./DropdownIcon_or.svg"
 import dropdownIconBright from "./DropdownIcon_bright.svg"
 import bgVideo from "./coffee.mp4"
+import ScrollAnimation from 'react-animate-on-scroll';
+import { width } from '@mui/system';
+
+
 function getWindowDimension(){
   const {innerWidth: width, innerHeight: height} = window;
   return {
@@ -68,28 +72,21 @@ function Header(){
   )
 }
 function Video(){
-  const {height, width} = useWindowDimensions();
   return (
     <div className='VideoBox'>
-    <video className = "bgVideo" muted
-    src = {bgVideo}
-    >
-    </video>      
+    <video className = "bgVideo" muted src = {bgVideo}></video>      
     </div>
   )
 }
 function App() {
   const matches = useMediaQuery('(min-width:1224px)');
   const [y, setY] = useState(window.scrollY);
-  const [s, sets] = useState(false);
+  const {height, width} = useWindowDimensions();
+
+  
   const handleNavigation = useCallback(
     e => {
       const window = e.currentTarget;
-      if (y > window.scrollY) {
-        console.log("scrolling up");
-      } else if (y < window.scrollY) {
-        sets(!s);
-      }
       setY(window.scrollY);
     }, [y]
   );
@@ -102,17 +99,29 @@ function App() {
       window.removeEventListener("scroll", handleNavigation);
     };
   }, [handleNavigation]);
+
+  const moveStyleLeft = (Ycoord)=>({
+    display: "flex", 
+    flexDirection:"column", 
+    alignItems: "center", 
+    zIndex: 8, 
+    position: "fixed",
+    transform: "translateX(-"+String(Ycoord)+"px)",
+    opacity: matches? 1-y/(0.3*width):1-y/(0.5*width) ,
+  })
+
   return (
     <div className="App">
       <Header/>
       <Video/>
-    <div className={matches? 'Info content':"InfoSmall content"} >
-    <div className={matches? 'Subheader bigSubHeader': "Subheader smallSubHeader"}>Yemma Lehnina </div>  
-    <div className='subBoxText'>
-      Lorem ipsum dolor sit amet. 33 quae maxime hic eaque
-  optio est dolor consequuntur eos perferendis saepe {String(s)}</div>  
-    <div className='AboutUs'> Over ons </div>  
-    </div>
+      <div className={matches? 'Info content':"InfoSmall content"} 
+      style={moveStyleLeft(y)}>
+        <div className={matches? 'Subheader bigSubHeader': "Subheader smallSubHeader"}>Yemma Lehnina </div>  
+        <div className='subBoxText'>
+          Lorem ipsum dolor sit amet. 33 quae maxime hic eaque
+          optio est dolor consequuntur eos perferendis saepe </div>  
+        <div className='AboutUs'> Over ons </div>  
+      </div>
     <div className='scroll'></div>
     </div>
   );
