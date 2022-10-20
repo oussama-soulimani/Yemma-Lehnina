@@ -8,7 +8,6 @@ import {useState, useEffect, useCallback} from "react"
 import dropdownIcon from "./DropdownIcon_or.svg"
 import dropdownIconBright from "./DropdownIcon_bright.svg"
 import bgVideo from "./coffee.mp4"
-import ScrollAnimation from 'react-animate-on-scroll';
 import { width } from '@mui/system';
 
 // dit is een test
