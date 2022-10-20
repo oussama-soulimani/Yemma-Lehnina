@@ -19,4 +19,8 @@ jobs:
         script: |
           cd Yemma-Lehnina
           git pull
-          git status
+          cd frontend_yemmalehnina
+          npm install
+          npm run build
+          sudo rm -rf /var/www/html/*
+          sudo cp -r build/* /var/www/html/
