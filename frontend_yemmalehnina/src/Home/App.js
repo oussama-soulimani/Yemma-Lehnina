@@ -120,7 +120,7 @@ function App() {
         <div className='subBoxText'>
           Lorem ipsum dolor sit amet. 33 quae maxime hic eaque
           optio est dolor consequuntur eos perferendis saepe </div>  
-        <div className='AboutUs'> Over ons </div>  
+        <div className= 'AboutUs'> Over ons </div>  
       </div>
     <div className='scroll'></div>
     </div>
