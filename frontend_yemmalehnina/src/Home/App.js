@@ -74,7 +74,7 @@ function Header(){
 function Video(){
   return (
     <div className='VideoBox'>
-    <video className = "bgVideo" muted src = {bgVideo}></video>      
+    <video className ="bgVideo" muted src = {bgVideo}></video>      
     </div>
   )
 }
