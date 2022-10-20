@@ -11,7 +11,7 @@ import bgVideo from "./coffee.mp4"
 import ScrollAnimation from 'react-animate-on-scroll';
 import { width } from '@mui/system';
 
-
+// dit is een test
 function getWindowDimension(){
   const {innerWidth: width, innerHeight: height} = window;
   return {
