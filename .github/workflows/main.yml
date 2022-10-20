@@ -16,4 +16,7 @@ jobs:
         username: ubuntu
         key: ${{ secrets.SSH_KEY }}
         port: 22
-        script: whoami
+        script: |
+          cd Yemma-Lehnina
+          git pull
+          git status
