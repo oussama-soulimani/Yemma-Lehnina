@@ -46,7 +46,7 @@
   align-items: center;
 }
 
-.MenuBox{
+.OptionsBox{
   height: 100%;
   width: 70px;
   float: right;
@@ -55,7 +55,7 @@
   
 }
 
-.Menu{
+.Options{
   float: right;
   width: 40%;
   height: 50%;
@@ -162,3 +162,4 @@
 .scroll{
   height: 12000px;
 }
+
