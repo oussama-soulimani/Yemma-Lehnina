@@ -1,12 +1,4 @@
 import React, { useState }  from 'react';
-import stylo from "./menu.css";
-import Coffee from "./Coffees.png";
-import Thees from "./Thees.png"
-import Colds from "./Colds.png"
-import Juices from "./Juices.png"
-import Snacks from "./Snacks.png"
-import Breakfast from "./Breakfast.png"
-import { height } from '@mui/system';
 
 
 const moveStyleLeft = (width, Ycoord, top, screenNum, peakBrightness)=>(
