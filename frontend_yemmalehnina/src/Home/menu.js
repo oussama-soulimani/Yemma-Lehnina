@@ -13,31 +13,29 @@ const moveStyleLeft = (width, Ycoord, top, screenNum, peakBrightness)=>(
     
     Ycoord<screenNum*peakBrightness? {
     position: "fixed",
-    width:"100%",
     left: width,
     top: top,
     transform: "translateX(-"+String(Ycoord)+"px)",
     opacity:Ycoord/peakBrightness,
   }:
   {position: "fixed",
-  width:"100%",
   left: width,
   top: top,
   transform: "translateX(-"+String(Ycoord)+"px)",
-  opacity:-Ycoord/peakBrightness+2,}
+  opacity:-Ycoord/peakBrightness+2,
+}
 )
 
 export default function Menu(props){
-      console.log(props.Ycoord, props.width, -(props.Ycoord-props.width)^2+1 )
     return (
       <div className={props.bigScreen ?'BigMenu':'SmallMenu'} 
-      style={moveStyleLeft(props.width, props.Ycoord, 0.225*props.height, 1, props.width)}>
-        <MenuElement type="Coffees" num = "0" />
-        <MenuElement type="Thees" num="1"/>
-        <MenuElement type="Colds" num="2"/>
-        <MenuElement type="Juices" num="3"/>
-        <MenuElement type="Breakfast" num="4"/>
-        <MenuElement type="Snacks" num="5"/>
+      style={moveStyleLeft(props.width, props.Ycoord, 0.15*props.height, 1, props.width)}>
+        <MenuElement type="Coffees" num = "0"  bigScreen = {props.bigScreen}/>
+        <MenuElement type="Thees" num="1" bigScreen = {props.bigScreen}/>
+        <MenuElement type="Colds" num="2" bigScreen = {props.bigScreen}/>
+        <MenuElement type="Juices" num="3" bigScreen = {props.bigScreen}/>
+        <MenuElement type="Breakfast" num="4" bigScreen = {props.bigScreen}/>
+        <MenuElement type="Snacks" num="5" bigScreen = {props.bigScreen}/>
       </div>
     )
 }
@@ -56,7 +54,7 @@ function MenuElement(props){
 
     ]
     return (
-        <div className='MenuElement' 
+        <div className={props.bigScreen? 'MenuElement': "MenuElementPhone"} 
         onMouseEnter={()=> setHover(true)}
         onMouseLeave={()=> setHover(false)}
         >

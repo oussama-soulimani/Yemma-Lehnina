@@ -3,29 +3,46 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    height: 55%;
-    width: 30px;
+    height: 75%;
+    width:80%;
+
 }
   
   .SmallMenu{           
     top: 30%;
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 80%;
+    width:95%;
   }
   
   .MenuElement{
-    width: 30%;
-    height: 50%;
+    width: 40%;
+    height: 33%;
     margin-bottom: 5px;
     margin-left: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+  }
 
-.Image{
+  .MenuElementPhone{
+    width: 47%;
+    height: 33%;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  
+  .Image{
     height: 100%;
     width: 100%;
+    border-radius: 5px;
     object-fit: cover;
 }
 
