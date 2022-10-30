@@ -2,6 +2,7 @@ package com.YemmaLehnina.Product;
 
 // API Layer
 
+import org.aspectj.lang.annotation.DeclareError;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,6 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path = "api/product")
+@CrossOrigin
 public class ProductController {
     private final ProductService productService;
 

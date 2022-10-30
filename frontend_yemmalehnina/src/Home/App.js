@@ -72,7 +72,7 @@ function Header(){
 function Video(){
   return (
     <div className='VideoBox'>
-    <video className = "bgVideo" muted src = {bgVideo}></video>      
+    <video className = "bgVideo" autoPlay loop muted src = {bgVideo}></video>      
     </div>
   )
 }
@@ -112,11 +112,11 @@ function App() {
   })
 
   const [response, setResponse] = useState(null)
-  const [name, setName] = useState("")
   const handleClick = ()=>{
-    fetch("http://localhost:8080/api/product")
-    .then((res)=>(res.json())).then(response=>setName(response[0].name))
+    fetch("http://localhost:8080/api/product", {method:"GET"})
+    .then((res)=>(res.json())).then(response=>console.log(response[0]))
   }
+  
   return (
     <div className="App">
       <Header/>
@@ -125,7 +125,7 @@ function App() {
       style={moveStyleLeft(y)}>
         <div className={bigScreen? 'Subheader bigSubHeader': "Subheader smallSubHeader"}>Yemma Lehnina </div>  
         <div className='subBoxText'>
-          |{name}| Lorem ipsum dolor sit amet. 33 quae maxime hic eaque
+          Lorem ipsum dolor sit amet. 33 quae maxime hic eaque
           optio est dolor consequuntur eos perferendis saepe </div>  
         <div className= 'AboutUs' onClick={handleClick}> Over ons </div>  
       </div>
