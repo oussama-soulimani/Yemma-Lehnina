@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@CrossOrigin
 @RequestMapping(path = "api/product")
+@CrossOrigin
 public class ProductController {
     private final ProductService productService;
 
