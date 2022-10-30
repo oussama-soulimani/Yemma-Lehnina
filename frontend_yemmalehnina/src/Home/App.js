@@ -117,7 +117,6 @@ function App() {
     fetch("http://localhost:8080/api/product", {method:"GET"})
     .then((res)=>(res.json())).then(response=>setName(response[0].name))
   }
-  
   return (
     <div className="App">
       <Header/>
