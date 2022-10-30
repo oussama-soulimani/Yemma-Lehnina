@@ -72,7 +72,7 @@ function Header(){
 function Video(){
   return (
     <div className='VideoBox'>
-    <video className = "bgVideo" autoPlay loop muted src = {bgVideo}></video>      
+    <video className = "bgVideo" muted src = {bgVideo}></video>      
     </div>
   )
 }
@@ -110,7 +110,20 @@ function App() {
     transform: "translateX(-"+String(Ycoord)+"px)",
     opacity: bigScreen? 1-y/(0.3*width):1-y/(0.5*width) ,
   })
-  
+  const [response, setResponse] = useState(null)
+  const [name, setName] = useState("")
+
+  const handleResponse = (resp) =>{
+    setResponse(resp);
+    setName(resp[0].n);
+    console.log(Object.keys(resp[0]));
+    console.log(resp[1].name);
+  }
+  const clickHandler = ()=>{
+    fetch("http://localhost:8080/api/product",{method: "GET"})
+    .then(res=>(res.json())).then((response)=>{handleResponse(response) })
+  }
+
   return (
     <div className="App">
       <Header/>
@@ -121,7 +134,7 @@ function App() {
         <div className='subBoxText'>
           Lorem ipsum dolor sit amet. 33 quae maxime hic eaque
           optio est dolor consequuntur eos perferendis saepe </div>  
-        <div className= 'AboutUs'> Over ons </div>  
+        <div className= 'AboutUs' onClick={clickHandler}> Over ons </div>  
       </div>
       <Menu bigScreen={bigScreen} height = {height} width = {width} Ycoord={y}/>
     <div className='scroll'></div>
