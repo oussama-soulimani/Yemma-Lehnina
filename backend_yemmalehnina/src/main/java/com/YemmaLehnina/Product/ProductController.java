@@ -9,7 +9,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path = "api/product")
-@CrossOrigin
 public class ProductController {
     private final ProductService productService;
 
