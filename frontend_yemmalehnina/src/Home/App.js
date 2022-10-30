@@ -114,7 +114,7 @@ function App() {
   const [response, setResponse] = useState(null)
   const [name, setName] = useState("")
   const handleClick = ()=>{
-    fetch("http://localhost:8080/api/product", {method:"GET"})
+    fetch("http://127.0.0.1:8080/api/product", {method:"GET"})
     .then((res)=>(res.json())).then(response=>setName(response[0].name))
   }
   
