@@ -126,8 +126,7 @@ function App() {
       style={moveStyleLeft(y)}>
         <div className={bigScreen? 'Subheader bigSubHeader': "Subheader smallSubHeader"}>Yemma Lehnina </div>  
         <div className='subBoxText'>
-
-          {name} Lorem ipsum dolor sit amet. 33 quae maxime hic eaque
+          |{name}| Lorem ipsum dolor sit amet. 33 quae maxime hic eaque
           optio est dolor consequuntur eos perferendis saepe </div>  
         <div className= 'AboutUs' onClick={handleClick}> Over ons </div>  
       </div>
