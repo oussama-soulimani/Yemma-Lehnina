@@ -113,7 +113,7 @@ function App() {
 
   const [response, setResponse] = useState(null)
   const handleClick = ()=>{
-    fetch("http://localhost:8080/api/product", {method:"GET"})
+    fetch("http://10.0.0.32:8080/api/product", {method:"GET"})
     .then((res)=>(res.json())).then(response=>console.log(response[0]))
   }
   
