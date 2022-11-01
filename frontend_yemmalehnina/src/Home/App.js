@@ -9,6 +9,7 @@ import dropdownIcon from "./DropdownIcon_or.svg"
 import dropdownIconBright from "./DropdownIcon_bright.svg"
 import bgVideo from "./coffee.mp4"
 import Menu from './menu';
+import axios from 'axios';
 // dit is een test
 function getWindowDimension(){
   const {innerWidth: width, innerHeight: height} = window;
@@ -112,9 +113,13 @@ function App() {
   })
 
   const [response, setResponse] = useState(null)
-  const handleClick = ()=>{
-    fetch("http://10.0.0.32:8080/api/product", {method:"GET"})
-    .then((res)=>(res.json())).then(response=>console.log(response[0]))
+  useEffect (()=>{
+    loadProducts();
+  }, []);
+
+  const loadProducts = ()=>{
+    axios.get("http://localhost:8080/api/product")
+    .then(response=>console.log(response["data"][0]))
   }
   
   return (
@@ -127,7 +132,7 @@ function App() {
         <div className='subBoxText'>
           Lorem ipsum dolor sit amet. 33 quae maxime hic eaque
           optio est dolor consequuntur eos perferendis saepe </div>  
-        <div className= 'AboutUs' onClick={handleClick}> Over ons </div>  
+        <div className= 'AboutUs'> Over ons </div>  
       </div>
       <Menu bigScreen={bigScreen} height = {height} width = {width} Ycoord={y}/>
     <div className='scroll'></div>
