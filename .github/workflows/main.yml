@@ -25,4 +25,4 @@ jobs:
           sudo rm -rf /var/www/html/*
           sudo cp -r build/* /var/www/html/
           cd ../backend_yemmalehnina
-          cat /etc/environment         
+          ./mvnw spring-boot:run         
