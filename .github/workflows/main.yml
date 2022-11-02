@@ -24,3 +24,7 @@ jobs:
           npm run build
           sudo rm -rf /var/www/html/*
           sudo cp -r build/* /var/www/html/
+          cd ../backend_yemmalehnina
+          sudo lsof -i -P -n |grep java| head -1 | kill $(awk '{print $2}')
+          ./mvnw spring-boot:run &
+          
