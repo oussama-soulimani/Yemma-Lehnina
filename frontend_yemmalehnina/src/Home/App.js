@@ -126,7 +126,7 @@ function App() {
         <div className={bigScreen? 'Subheader bigSubHeader': "Subheader smallSubHeader"}>Yemma Lehnina </div>  
         <div className='subBoxText'>
           |{name}| Lorem ipsum dolor sit amet. 33 quae maxime hic eaque
-          optio est dolor consequuntur eos perferendis saepe. </div>  
+          optio est dolor consequuntur eos perferendis saepe </div>  
         <div className= 'AboutUs' onClick={loadProducts}> Over ons </div>  
       </div>
       <Menu bigScreen={bigScreen} height = {height} width = {width} Ycoord={y}/>
