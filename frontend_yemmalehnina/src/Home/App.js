@@ -9,8 +9,7 @@ import dropdownIcon from "./DropdownIcon_or.svg"
 import dropdownIconBright from "./DropdownIcon_bright.svg"
 import bgVideo from "./coffee.mp4"
 import Menu from './menu';
-import axios from 'axios';
-// dit is een test
+
 function getWindowDimension(){
   const {innerWidth: width, innerHeight: height} = window;
   return {
@@ -112,14 +111,10 @@ function App() {
     opacity: bigScreen? 1-y/(0.3*width):1-y/(0.5*width) ,
   })
 
-  const [response, setResponse] = useState(null)
-  useEffect (()=>{
-    loadProducts();
-  }, []);
-
+  const [name, setName] = useState("")
   const loadProducts = ()=>{
-    axios.get("http://localhost:8080/api/product")
-    .then(response=>console.log(response["data"][0]))
+    fetch("http://150.230.21.45:81/api/product", {method:"GET"})
+    .then((res)=>(res.json())).then(response=>console.log(response[0]["name"])&setName(response[0]["name"]))
   }
   
   return (
@@ -130,9 +125,9 @@ function App() {
       style={moveStyleLeft(y)}>
         <div className={bigScreen? 'Subheader bigSubHeader': "Subheader smallSubHeader"}>Yemma Lehnina </div>  
         <div className='subBoxText'>
-          Lorem ipsum dolor sit amet. 33 quae maxime hic eaque
+          |{name}|Lorem ipsum dolor sit amet. 33 quae maxime hic eaque
           optio est dolor consequuntur eos perferendis saepe </div>  
-        <div className= 'AboutUs'> Over ons </div>  
+        <div className= 'AboutUs' onClick={loadProducts}> Over ons </div>  
       </div>
       <Menu bigScreen={bigScreen} height = {height} width = {width} Ycoord={y}/>
     <div className='scroll'></div>
