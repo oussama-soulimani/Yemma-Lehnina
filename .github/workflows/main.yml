@@ -26,5 +26,5 @@ jobs:
           sudo cp -r build/* /var/www/html/
           cd ../backend_yemmalehnina
           cat /etc/environment
-          ./mvn --version
+          ./mvnw --version
           mvn spring-boot:run
