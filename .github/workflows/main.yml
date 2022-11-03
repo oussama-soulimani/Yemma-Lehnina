@@ -25,7 +25,7 @@ jobs:
           sudo rm -rf /var/www/html/*
           sudo cp -r build/* /var/www/html/
           cd ../backend_yemmalehnina
-          cat /etc/environment
-          ifconfig
-          ./mvnw --version
+          sudo lsof -i -P -n |grep java| head -1 | kill $(awk '{print $2}')
+          (nohup ./mvnw spring-boot:run &) && exit
+          
           
