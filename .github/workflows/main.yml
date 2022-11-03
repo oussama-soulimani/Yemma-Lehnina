@@ -27,5 +27,4 @@ jobs:
           cd ../backend_yemmalehnina
           sudo lsof -i -P -n |grep java| head -1 | kill $(awk '{print $2}')
           nohup ./mvnw spring-boot:run > nohup.out 2> nohup.err < /dev/null &
-          echo check
           
