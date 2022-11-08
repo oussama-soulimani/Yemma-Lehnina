@@ -19,7 +19,7 @@ const moveStyleLeft = (width, Ycoord, top, screenNum, peakBrightness)=>(
 )
 
 function SubMenu(props){
-  const color = ["#78451C","#355718","#4362AB","#4E9B00","#342c0c","#C94545"]
+  const color = ["#78451C","#355718","#4362AB","#494b18","#342c0c","#7c0d05"]
   const [products, setProducts]=useState(0)
   useEffect (()=>{
     fetch(url+"/"+props.category.toLowerCase(), {method:"GET"})
@@ -75,9 +75,9 @@ function MenuElement(props){
         "#78451C",
         "#355718",
         "#4362AB",
-        "#4E9B00",
+        "#494b18",
         "#342c0c",
-        "#C94545",
+        "#7c0d05",
     ]
     return (
         <div className={props.bigScreen? 'MenuElement': "MenuElementPhone"} 

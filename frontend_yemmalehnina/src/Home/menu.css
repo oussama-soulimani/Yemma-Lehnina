@@ -120,13 +120,14 @@
 }
 
 .productsLinesContainer0{
-  width: 75%;
+    width: 75%;
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
   height: 70%;
   overflow: auto;
+  margin-bottom: 3%
 }
 .productsLinesContainer0::-webkit-scrollbar{
   width: 10px;
@@ -145,13 +146,14 @@
 }
 
 .productsLinesContainer1{
-  width: 75%;
+    width: 75%;
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
   height: 70%;
   overflow: auto;
+  margin-bottom: 3%
 }
 .productsLinesContainer1::-webkit-scrollbar{
   width: 10px;
@@ -171,13 +173,14 @@
 }
 
 .productsLinesContainer2{
-  width: 75%;
+    width: 75%;
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
   height: 70%;
   overflow: auto;
+  margin-bottom: 3%
 }
 .productsLinesContainer2::-webkit-scrollbar{
   width: 10px;
@@ -197,20 +200,21 @@
 }
 
 .productsLinesContainer3{
-  width: 75%;
+    width: 75%;
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
   height: 70%;
   overflow: auto;
+  margin-bottom: 3%
 }
 .productsLinesContainer3::-webkit-scrollbar{
   width: 10px;
   display: block;
 }
 .productsLinesContainer3::-webkit-scrollbar-track{
-  background-color: hsl(90, 100%, 22%);
+  background-color: hsl(62, 52%, 22%);
   margin-top: 3px;
   margin-bottom: 3px;
   border-radius: 10px;
@@ -218,17 +222,18 @@
 .productsLinesContainer3::-webkit-scrollbar-thumb{
   margin-right: 20px;
   border-radius: 10px;
-  background-color: hsl(90, 100%, 35%);
+  background-color: hsl(62, 52%, 35%);
 }
 
 .productsLinesContainer4{
-  width: 75%;
+    width: 75%;
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
   height: 70%;
   overflow: auto;
+  margin-bottom: 3%
 }
 .productsLinesContainer4::-webkit-scrollbar{
   width: 10px;
@@ -247,20 +252,21 @@
 }
 
 .productsLinesContainer5{
-  width: 75%;
+    width: 75%;
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
   height: 70%;
   overflow: auto;
+  margin-bottom: 3%
 }
 .productsLinesContainer5::-webkit-scrollbar{
   width: 10px;
   display: block;
 }
 .productsLinesContainer5::-webkit-scrollbar-track{
-  background-color: hsl(0, 55%, 22%);
+  background-color: hsl(4, 92%, 22%);
   margin-top: 3px;
   margin-bottom: 3px;
   border-radius: 10px;
@@ -268,5 +274,5 @@
 .productsLinesContainer5::-webkit-scrollbar-thumb{
   margin-right: 20px;
   border-radius: 10px;
-  background-color: hsl(0, 55%, 35%);
+  background-color: hsl(4, 92%, 35%);
 }
