@@ -19,7 +19,7 @@ const moveStyleLeft = (width, Ycoord, top, screenNum, peakBrightness)=>(
 )
 
 function SubMenu(props){
-  const color = ["#78451C","#355718","#4362AB","#4E9B00","#976CC8","#C94545"]
+  const color = ["#78451C","#355718","#4362AB","#4E9B00","#342c0c","#C94545"]
   const [products, setProducts]=useState(0)
   useEffect (()=>{
     fetch(url+"/"+props.category.toLowerCase(), {method:"GET"})
@@ -76,7 +76,7 @@ function MenuElement(props){
         "#355718",
         "#4362AB",
         "#4E9B00",
-        "#976CC8",
+        "#342c0c",
         "#C94545",
     ]
     return (
