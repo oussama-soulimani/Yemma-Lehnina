@@ -30,7 +30,7 @@ function SubMenu(props){
   var productsLines = []
   for(var i=0; i<products.length; i++){
     productsLines.push(
-    <div className='productLineContainer'>
+    <div className={props.bigScreen?'productLineContainerBig':"productLineContainerPhone"}>
       <div className = 'productName'>{products[i]["name"]}</div>
       <div className = 'productName'>{products[i]["price"]} dh</div>
     </div>)
@@ -63,7 +63,7 @@ export default function Menu(props){
   return (
       <div className={props.bigScreen ?'BigMenu':'SmallMenu'} 
       style={moveStyleLeft(props.width, props.Ycoord, 0.15*props.height, 1, props.width)}>
-        {clicked==null?MenuElements:<SubMenu catNum={clicked} category={categories[clicked]} setClicked={setClicked} />}
+        {clicked==null?MenuElements:<SubMenu catNum={clicked} category={categories[clicked]} setClicked={setClicked} bigScreen={props.bigScreen} />}
       </div>
     )
 }

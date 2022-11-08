@@ -99,12 +99,22 @@
   border-radius: 6px;
 }
 
-.productLineContainer{
+.productLineContainerBig{
   width: 80%;
   display: flex;
   justify-content: space-between;
   font-family: "Hezaedrus-regular";
   font-size: 27px;
+  border-bottom: 3px dotted;
+  margin-bottom: 20px;
+}
+
+.productLineContainerPhone{
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Hezaedrus-regular";
+  font-size: 20px;
   border-bottom: 3px dotted;
   margin-bottom: 20px;
 }
@@ -115,7 +125,7 @@
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  height: 50%;
+  height: 70%;
   overflow: auto;
 }
 .productsLinesContainer0::-webkit-scrollbar{
@@ -132,7 +142,6 @@
   margin-right: 20px;
   border-radius: 10px;
   background-color: hsl(27, 62%, 35%);
-
 }
 
 .productsLinesContainer1{
@@ -141,7 +150,7 @@
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  height: 50%;
+  height: 70%;
   overflow: auto;
 }
 .productsLinesContainer1::-webkit-scrollbar{
@@ -167,7 +176,7 @@
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  height: 50%;
+  height: 70%;
   overflow: auto;
 }
 .productsLinesContainer2::-webkit-scrollbar{
@@ -193,7 +202,7 @@
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  height: 50%;
+  height: 70%;
   overflow: auto;
 }
 .productsLinesContainer3::-webkit-scrollbar{
@@ -218,7 +227,7 @@
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  height: 50%;
+  height: 70%;
   overflow: auto;
 }
 .productsLinesContainer4::-webkit-scrollbar{
@@ -243,7 +252,7 @@
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  height: 50%;
+  height: 70%;
   overflow: auto;
 }
 .productsLinesContainer5::-webkit-scrollbar{
