@@ -35,13 +35,14 @@ function SubMenu(props){
       <div className = 'productName'>{products[i]["price"]} dh</div>
     </div>)
   }
-
+  
   return(
     <div className='subMenu' style={{color:color[props.catNum]}}>
       <div className='blurredBackground'></div>
       <div className='overlay'>
         <div className='subHeader' >{props.category}</div>
-        <div className='productsLinesContainer'>{typeof(products)!="number"?productsLines:null}</div>
+        <div className={'productsLinesContainer'+String(props.catNum)}>
+              {typeof(products)!="number"?productsLines:null}</div>
         <div className='backButtonContainer' onClick={()=>props.setClicked(null)}>
           <div className="backButton" style={{border:"3px solid "+color[props.catNum]}} >Back</div>
         </div>

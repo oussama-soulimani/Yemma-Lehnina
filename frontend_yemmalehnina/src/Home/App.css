@@ -4,7 +4,10 @@
 }
 .App {
   background-size:30em;
+}
 
+::-webkit-scrollbar{
+  display: none;
 }
 
 .Header{
@@ -161,4 +164,3 @@
 .scroll{
   height: 12000px;
 }
-
