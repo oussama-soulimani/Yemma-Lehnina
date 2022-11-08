@@ -57,6 +57,7 @@ export default function Menu(props){
   const categories = ["Coffees", "Thees", "Colds","Juices", "Breakfast", "Snacks"]
   
   const MenuElements = [];
+  console.log(categories.length)
   for (var i=0; i<categories.length; i++){
     MenuElements.push(<MenuElement type={categories[i]} key = {i} setClicked = {setClicked} num = {String(i)}  bigScreen = {props.bigScreen}/>)
   }

@@ -1,10 +1,11 @@
 
 .BigMenu{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    height: 75%;
-    width:50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 75%;
+  width:50%;
+
 }
   
 .SmallMenu{           
@@ -44,13 +45,13 @@
 }
 
 .subMenuName{
-    position: absolute;
-    height:4%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 52px;
-    font-family: "Hezaedrus-regular";
+  position: absolute;
+  height:4%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 52px;
+  font-family: "Hezaedrus-regular";
 
 }
 .subMenu{
@@ -58,6 +59,7 @@
   height: auto;
   color: #355718;
 }
+
 .blurredBackground{
   width: 100%;
   height: 100%;
@@ -104,7 +106,7 @@
   display: flex;
   justify-content: space-between;
   font-family: "Hezaedrus-regular";
-  font-size: 27px;
+  font-size: 24px;
   border-bottom: 3px dotted;
   margin-bottom: 20px;
 }
