@@ -10,6 +10,9 @@ import dropdownIconBright from "./DropdownIcon_bright.svg"
 import bgVideo from "./coffee.mp4"
 import Menu from './menu';
 
+// export const url = "http://localhost:8080/api/products"
+export const url = "http://150.230.21.45:81/api/products"
+
 function getWindowDimension(){
   const {innerWidth: width, innerHeight: height} = window;
   return {
@@ -72,7 +75,7 @@ function Header(){
 function Video(){
   return (
     <div className='VideoBox'>
-    <video className = "bgVideo" autoPlay loop muted src = {bgVideo}></video>      
+    <video className = "bgVideo" muted src = {bgVideo}></video>      
     </div>
   )
 }
@@ -113,8 +116,8 @@ function App() {
 
   const [name, setName] = useState("")
   const loadProducts = ()=>{
-    fetch("http://150.230.21.45:81/api/product", {method:"GET"})
-    .then((res)=>(res.json())).then(response=>console.log(response[0]["name"])&setName(response[0]["name"]))
+    fetch(url+"/all", {method:"GET"})
+    .then((res)=>(res.json())).then(data=>{setName(data[0]["name"])})
   }
   
   return (

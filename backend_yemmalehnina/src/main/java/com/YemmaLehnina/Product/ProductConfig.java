@@ -11,25 +11,9 @@ public class ProductConfig {
 
     @Bean
     CommandLineRunner commandLineRunner(ProductRepository repository){
-        return args -> {
-            Product Koffie = new Product(
-                    "koffie",
-                    "koffie.png",
-                    null,
-                    7,
-                    true,
-                    List.of("Melk", "Koffie")
-            );
-            Product Thee = new Product(
-                    "thee",
-                    "thee.png",
-                    null,
-                    7,
-                    true,
-                    List.of("mint", "water", "suiker")
-            );
+        return args -> {    
             repository.saveAll(
-                    List.of(Thee, Koffie)
+                List.of()
             );
         };
     }

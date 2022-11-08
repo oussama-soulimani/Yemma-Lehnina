@@ -18,6 +18,7 @@ public class Product {
     )
     private Long id;
     private String name;
+    private String category;
     private String picture;
     private String description;
     private float price;
@@ -29,9 +30,10 @@ public class Product {
     public Product() {
     }
 
-    public Product(Long id, String name, String picture, String description, float price, boolean available, List<String> ingredients) {
+    public Product(Long id, String name, String category, String picture, String description, float price, boolean available, List<String> ingredients) {
         this.id = id;
         this.name = name;
+        this.category=category;
         this.picture = picture;
         this.description = description;
         this.price = price;
@@ -39,9 +41,10 @@ public class Product {
         this.ingredients = ingredients;
     }
 
-    public Product(String name, String picture, String description, float price, boolean available, List<String> ingredients) {
+    public Product(String name, String category, String picture, String description, float price, boolean available, List<String> ingredients) {
         this.name = name;
         this.picture = picture;
+        this.category=category;
         this.description = description;
         this.price = price;
         this.available = available;
@@ -64,6 +67,13 @@ public class Product {
         this.name = name;
     }
 
+    public void setCategory(String category){
+        this.category=category;
+    }
+
+    public String getCategory(){
+        return category;
+    }
     public String getPicture() {
         return picture;
     }
@@ -109,6 +119,7 @@ public class Product {
         return "Product{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
+                ", category" + category + '\'' +
                 ", picture='" + picture + '\'' +
                 ", description='" + description + '\'' +
                 ", price=" + price +

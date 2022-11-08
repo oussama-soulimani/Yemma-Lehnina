@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController
 @CrossOrigin
-@RequestMapping(path = "api/product")
+@RequestMapping(path = "api/products/{category}")
 public class ProductController {
     private final ProductService productService;
 
@@ -19,8 +19,8 @@ public class ProductController {
     }
 
     @GetMapping
-    public List<Product> getProducts(){
-        return productService.getProducts();
+    public List<Product> getProducts(@PathVariable("category") String category){
+        return productService.getProducts(category);
     }
 
     @PostMapping
@@ -37,6 +37,7 @@ public class ProductController {
     public void updateProduct(
             @PathVariable("productId") Long productId,
             @RequestParam(required = false)  String name,
+            @RequestParam(required = false)  String category,
             @RequestParam(required = false)  String picture,
             @RequestParam(required = false)  String description,
             @RequestParam(required = true)  float price,

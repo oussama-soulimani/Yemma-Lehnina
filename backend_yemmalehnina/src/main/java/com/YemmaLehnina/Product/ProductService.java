@@ -20,8 +20,15 @@ public class ProductService {
     }
 
 
-    public List<Product> getProducts(){
-        return productRepository.findAll();
+    public List<Product> getProducts(String category){
+        if(category.equals("all")){
+            System.out.println("\n\n\n\n\n\n");
+            System.out.println(category);
+            System.out.println("\n\n\n\n\n\n");
+            return productRepository.findAll();
+    
+        }
+        return productRepository.findProductByCategory(category);
     }
 
     public void addNewProduct(Product product) {
