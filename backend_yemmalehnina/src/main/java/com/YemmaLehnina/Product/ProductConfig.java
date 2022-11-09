@@ -494,7 +494,13 @@ public class ProductConfig {
             
 
             repository.saveAll(
-                List.of()
+                List.of(Koffie, Koffie2, Koffie3, Koffie4,Koffie5, Koffie6, Koffie7, Koffie8, Koffie9, Koffie10, Koffie11, warm1,warm2,
+                        Thee1, Thee2,Thee3,Thee4,Thee5,
+                        cold1,cold2,cold3,cold4,cold5,cold6,cold7,cold8,cold9,
+                        snack1,snack2,snack3,
+                        breakfast1,breakfast2,breakfast3,breakfast4,breakfast5,breakfast6,breakfast7,breakfast8,breakfast9,breakfast10,breakfast11,breakfast12,breakfast13,
+                        juice1,juice2,juice3,juice4,juice5,juice6,juice7,juice8,juice9,juice10
+                        )
             );
         };
     }
