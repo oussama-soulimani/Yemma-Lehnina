@@ -21,19 +21,23 @@ const moveStyleLeft = (width, Ycoord, top, screenNum, peakBrightness)=>(
 function SubMenu(props){
   const color = ["#78451C","#355718","#4362AB","#494b18","#342c0c","#7c0d05"]
   const [products, setProducts]=useState(0)
+
   useEffect (()=>{
     fetch(url+"/"+props.category.toLowerCase(), {method:"GET"})
     // fetch(url+"/all", {method:"GET"})
-    .then((res)=>(res.json())).then(data=>{setProducts(data)})
+    .then((res)=>(res.json())).then(data=>{console.log("-->", data)})
   },[]);
-
-  var productsLines = []
-  for(var i=0; i<products.length; i++){
-    productsLines.push(
-    <div className={props.bigScreen?'productLineContainerBig':"productLineContainerPhone"}>
-      <div className = 'productName'>{products[i]["name"]}</div>
-      <div className = 'productName'>{products[i]["price"]} dh</div>
-    </div>)
+  
+  const getProducts = () =>{
+    var productsLines = []
+    for(var i=0; i<products.length; i++){
+      productsLines.push(
+      <div className={props.bigScreen?'productLineContainerBig':"productLineContainerPhone"}>
+        <div className = 'productName'>{products[i]["name"]}</div>
+        <div className = 'productName'>{products[i]["price"]} dh</div>
+      </div>)
+    }
+    return productsLines
   }
   
   return(
@@ -42,7 +46,7 @@ function SubMenu(props){
       <div className='overlay'>
         <div className='subHeader' >{props.category}</div>
         <div className={'productsLinesContainer'+String(props.catNum)}>
-              {typeof(products)!="number"?productsLines:null}</div>
+              {getProducts()}</div>
         <div className='backButtonContainer' onClick={()=>props.setClicked(null)}>
           <div className="backButton" style={{border:"3px solid "+color[props.catNum]}} >Back</div>
         </div>
@@ -57,7 +61,6 @@ export default function Menu(props){
   const categories = ["Coffees", "Thees", "Colds","Juices", "Breakfast", "Snacks"]
   
   const MenuElements = [];
-  console.log(categories.length)
   for (var i=0; i<categories.length; i++){
     MenuElements.push(<MenuElement type={categories[i]} key = {i} setClicked = {setClicked} num = {String(i)}  bigScreen = {props.bigScreen}/>)
   }
