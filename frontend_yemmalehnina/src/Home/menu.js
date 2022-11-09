@@ -25,7 +25,7 @@ function SubMenu(props){
   useEffect (()=>{
     fetch(url+"/"+props.category.toLowerCase(), {method:"GET"})
     // fetch(url+"/all", {method:"GET"})
-    .then((res)=>(res.json())).then(data=>{console.log("-->", data)})
+    .then((res)=>(res.json())).then(data=>{setProducts(data)})
   },[]);
   
   const getProducts = () =>{

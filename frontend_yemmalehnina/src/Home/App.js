@@ -10,8 +10,8 @@ import dropdownIconBright from "./DropdownIcon_bright.svg"
 import bgVideo from "./coffee.mp4"
 import Menu from './menu';
 
-export const url = "http://localhost:8080/api/products"
-// export const url = "http://150.230.21.45:81/api/products"
+// export const url = "http://localhost:8080/api/products"
+export const url = "http://150.230.21.45:81/api/products"
 
 function getWindowDimension(){
   const {innerWidth: width, innerHeight: height} = window;
